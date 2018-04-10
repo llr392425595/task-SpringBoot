@@ -15,6 +15,8 @@ public class EmployeeEntity {
   private Integer age;
   private String gender;
 
+  public EmployeeEntity() { }
+
   public EmployeeEntity(String name, Integer age, String gender) {
     this.name = name;
     this.age = age;
