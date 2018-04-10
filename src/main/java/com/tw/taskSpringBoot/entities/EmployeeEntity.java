@@ -1,13 +1,21 @@
 package com.tw.taskSpringBoot.entities;
 
-public class Employee {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
+public class EmployeeEntity {
+
+  @Id
+  @GeneratedValue
   private Long id;
+
   private String name;
   private Integer age;
   private String gender;
 
-  public Employee(String name, Integer age, String gender) {
+  public EmployeeEntity(String name, Integer age, String gender) {
     this.name = name;
     this.age = age;
     this.gender = gender;

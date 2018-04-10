@@ -1,7 +1,5 @@
 package com.tw.taskSpringBoot.controllers;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,13 +17,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = MockServletContext.class)
 @WebAppConfiguration
-public class EmployeeTest {
+public class EmployeeControllerEntityTest {
 
   private MockMvc mvc;
 
   @Before
   public void setUp() throws Exception {
-    mvc = MockMvcBuilders.standaloneSetup(new Employee()).build();
+    mvc = MockMvcBuilders.standaloneSetup(new EmployeeController()).build();
   }
 
   @Test
