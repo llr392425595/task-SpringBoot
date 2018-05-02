@@ -1,14 +1,10 @@
 package com.tw.taskSpringBoot.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.HashMap;
+import java.util.Map;
 
-@Entity
 public class EmployeeEntity {
 
-  @Id
-  @GeneratedValue
   private Long id;
 
   private String name;
@@ -53,5 +49,15 @@ public class EmployeeEntity {
 
   public void setGender(String gender) {
     this.gender = gender;
+  }
+
+  @Override
+  public String toString() {
+    Map<String, Object> map = new HashMap<>();
+    map.put("id", this.id);
+    map.put("name", this.name);
+    map.put("age", this.age);
+    map.put("gender", this.gender);
+    return map.toString();
   }
 }
