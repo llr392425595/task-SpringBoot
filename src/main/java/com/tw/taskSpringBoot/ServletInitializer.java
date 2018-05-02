@@ -1,6 +1,5 @@
-package com.tw.taskSpringBoot.repositories;
+package com.tw.taskSpringBoot;
 
-import com.tw.taskSpringBoot.TaskSpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
