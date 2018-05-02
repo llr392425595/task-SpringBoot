@@ -1,9 +1,13 @@
 package com.tw.taskSpringBoot.repositories;
 
-
 import com.tw.taskSpringBoot.entities.EmployeeEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-public interface EmployeeRepository extends JpaRepository<EmployeeEntity,Integer>{
-
+public interface EmployeeRepository {
+  EmployeeEntity createEmployee(EmployeeEntity employee) throws Exception;
+  EmployeeEntity deleteEmployee(int id) throws Exception;
+  EmployeeEntity updateEmployee(int id, EmployeeEntity employee) throws Exception;
+  EmployeeEntity getEmployee(int id);
+  EmployeeEntity getEmployee(String name);
+  List<EmployeeEntity> getAllEmployees();
 }
