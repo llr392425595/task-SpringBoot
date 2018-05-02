@@ -5,50 +5,54 @@ import java.util.Map;
 
 public class EmployeeEntity {
 
-  private Long id;
-
+  private long id;
   private String name;
   private Integer age;
   private String gender;
 
   public EmployeeEntity() { }
 
-  public EmployeeEntity(String name, Integer age, String gender) {
+  public EmployeeEntity(long id, String name, Integer age, String gender) {
+    this.id = id;
     this.name = name;
     this.age = age;
     this.gender = gender;
   }
 
-  public Long getId() {
+  public long getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public EmployeeEntity setId(long id) {
     this.id = id;
+    return this;
   }
 
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public EmployeeEntity setName(String name) {
     this.name = name;
+    return this;
   }
 
   public Integer getAge() {
     return age;
   }
 
-  public void setAge(Integer age) {
+  public EmployeeEntity setAge(Integer age) {
     this.age = age;
+    return this;
   }
 
   public String getGender() {
     return gender;
   }
 
-  public void setGender(String gender) {
+  public EmployeeEntity setGender(String gender) {
     this.gender = gender;
+    return this;
   }
 
   @Override
