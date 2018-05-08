@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface EmployeeRepository {
   EmployeeEntity createEmployee(EmployeeEntity employee) throws Exception;
-  EmployeeEntity deleteEmployee(int id) throws Exception;
-  EmployeeEntity updateEmployee(int id, EmployeeEntity employee) throws Exception;
-  EmployeeEntity getEmployee(int id);
+  EmployeeEntity deleteEmployee(long id) throws Exception;
+  EmployeeEntity updateEmployee(long id, EmployeeEntity employee) throws Exception;
+  EmployeeEntity getEmployee(long id);
   EmployeeEntity getEmployee(String name);
   List<EmployeeEntity> getAllEmployees();
 }

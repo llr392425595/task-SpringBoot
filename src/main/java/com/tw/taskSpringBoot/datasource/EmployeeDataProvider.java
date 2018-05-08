@@ -17,7 +17,7 @@ public class EmployeeDataProvider {
     return employees;
   }
 
-  public EmployeeEntity getEmployee(int id) {
+  public EmployeeEntity getEmployee(long id) {
     for (EmployeeEntity employee : employees) {
       if (employee.getId() == id) {
         return employee;
@@ -44,7 +44,7 @@ public class EmployeeDataProvider {
     return employee;
   }
 
-  public EmployeeEntity updateEmployee(int id, EmployeeEntity employee) throws Exception {
+  public EmployeeEntity updateEmployee(long id, EmployeeEntity employee) throws Exception {
     if (employee.getAge() == null || employee.getName() == null || employee.getGender() == null) {
       throw new Exception("Invalid Employee!");
     }
@@ -61,7 +61,7 @@ public class EmployeeDataProvider {
         .setGender(employee.getGender());
   }
 
-  public EmployeeEntity deleteEmployee(int id) throws Exception {
+  public EmployeeEntity deleteEmployee(long id) throws Exception {
     EmployeeEntity employee = getEmployee(id);
 
     if (employee == null) {

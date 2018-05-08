@@ -15,23 +15,23 @@ public class TestEmployeeRepository implements EmployeeRepository{
   }
 
   @Override
-  public EmployeeEntity deleteEmployee(int id) throws Exception {
+  public EmployeeEntity deleteEmployee(long id) throws Exception {
     return employeeDataProvider.deleteEmployee(id);
   }
 
   @Override
-  public EmployeeEntity updateEmployee(int id, EmployeeEntity employee) throws Exception {
+  public EmployeeEntity updateEmployee(long id, EmployeeEntity employee) throws Exception {
     return employeeDataProvider.updateEmployee(id, employee);
+  }
+
+  @Override
+  public EmployeeEntity getEmployee(long id) {
+    return employeeDataProvider.getEmployee(id);
   }
 
   @Override
   public EmployeeEntity getEmployee(String name) {
     return employeeDataProvider.getEmployee(name);
-  }
-
-  @Override
-  public EmployeeEntity getEmployee(int id) {
-    return employeeDataProvider.getEmployee(id);
   }
 
   @Override
